@@ -70,9 +70,9 @@ class Scan(MedImage):
         """
         # Check if "SpacingBetweenSlices" is undefined - it's an optional tag so this is possible
         # https://dicom.innolitics.com/ciods/ct-image/image-plane/00180088
-        if self.metadata.get('SpacingBetweenSlices') == 'None':
-            return 
-        
+        if self.metadata.get("SpacingBetweenSlices") == "None":
+            return
+
         slice_spacing = float(self.metadata.get("SpacingBetweenSlices") or 0)
         if (not slice_spacing) or (slice_spacing >= 0):
             return
