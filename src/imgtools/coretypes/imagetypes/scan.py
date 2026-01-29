@@ -76,7 +76,7 @@ class Scan(MedImage):
         except (ValueError, TypeError):
             # SpacingBetweenSlices is undefined or not a valid numeric value
             return
-        
+
         if (not slice_spacing) or (slice_spacing >= 0):
             return
 
